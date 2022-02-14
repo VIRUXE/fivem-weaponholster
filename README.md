@@ -9,4 +9,4 @@ Note: In reality you don't run around like GTA carrying multiple heavy weapons s
 
 Thank you to [itshapp](https://github.com/itzhapp/ShowWeapon) for the weapon's table.
 
-[^Image]: ![image](https://user-images.githubusercontent.com/1616657/153957729-233016ff-b48a-4c58-8afe-d800cf656d65.png)
+![image](https://user-images.githubusercontent.com/1616657/153957729-233016ff-b48a-4c58-8afe-d800cf656d65.png)
