@@ -50,17 +50,16 @@ AddEventHandler('ox_inventory:currentWeapon',function(currentWeapon)
         if weaponEquipped and weaponEquipped.name then 
             if weaponData[weaponEquipped and weaponEquipped.name] and weaponData[weaponEquipped.name].onBack == true then
                 if weaponHolstered.object then DeleteObject(weaponHolstered.object) end
-                    while not HasModelLoaded(weaponData[weaponEquipped.name].model) do
-                        RequestModel(weaponData[weaponEquipped.name].model)
-                        Wait(0)
-                    end
-
-                    weaponHolstered.name = weaponEquipped.name
-                    weaponHolstered.object = CreateObject(weaponData[weaponEquipped.name].model, 0, 0, 0, true, true, true)
-
-                    SetModelAsNoLongerNeeded(weaponData[weaponEquipped.name].model)
-                    AttachEntityToEntity(weaponHolstered.object, playerPed, GetPedBoneIndex(playerPed, 24816), weaponData[weaponEquipped.name].onBack and 0.3 or 0.2, weaponData[weaponEquipped.name].onBack and -0.15 or 0.20, weaponData[weaponEquipped.name].onBack and 0.05 or -0.1, weaponData[weaponEquipped.name].onBack and 0.0 or 180.0, weaponData[weaponEquipped.name].onBack and 0.0 or 220.0, 0.0, true, true, false, false, 1, true)
+                while not HasModelLoaded(weaponData[weaponEquipped.name].model) do
+                    RequestModel(weaponData[weaponEquipped.name].model)
+                    Wait(0)
                 end
+
+                weaponHolstered.name = weaponEquipped.name
+                weaponHolstered.object = CreateObject(weaponData[weaponEquipped.name].model, 0, 0, 0, true, true, true)
+
+                SetModelAsNoLongerNeeded(weaponData[weaponEquipped.name].model)
+                AttachEntityToEntity(weaponHolstered.object, playerPed, GetPedBoneIndex(playerPed, 24816), weaponData[weaponEquipped.name].onBack and 0.3 or 0.2, weaponData[weaponEquipped.name].onBack and -0.15 or 0.20, weaponData[weaponEquipped.name].onBack and 0.05 or -0.1, weaponData[weaponEquipped.name].onBack and 0.0 or 180.0, weaponData[weaponEquipped.name].onBack and 0.0 or 220.0, 0.0, true, true, false, false, 1, true)
             end
         end
     elseif currentWeapon and currentWeapon.name == weaponHolstered.name then
