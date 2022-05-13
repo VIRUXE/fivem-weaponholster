@@ -1,5 +1,6 @@
 # Weapon Holster
 This resource is for people that use the [Overextended Inventory](https://github.com/overextended/ox_inventory) and want a more realistic mechanic for holstering weapons.
+**Warning: I'm not using this Inventory anymore so feel free to fork it if you pretend to fix or extend it.**
 
 It doesn't work for all weapons, but for those that work (heavy ones) you can set if you want them attached to the characters **Chest** or **Back** (check `client.lua`).
 
